@@ -10,27 +10,27 @@ int main() {
 	CVect2D Vect_Bravo(41.9f,93.3f);
 	float resultat=0.0f;
 	float  Scalaire = 2.5f;
-	float Xa = 1.0f;
-	float Ya = 4.0f;
-	float Xb = 5.3f;
-	float Yb = 8.1f;
+	
 	
 	Vect_Alpha.AddVect(Vect_Alpha, Vect_Bravo, Resultat);
+	std::cout << "L'Addition a pour resultat (" << Resultat.m_fltX << "," << Resultat.m_fltY << ")" << std::endl;
 	
 
 	Vect_Alpha.SousVect(Vect_Alpha, Vect_Bravo, Resultat);
+	std::cout << "La Soustraction a pour resultat (" << Resultat.m_fltX << "," << Resultat.m_fltY << ")" << std::endl;
 	
 
 	Vect_Alpha.MultScal(Vect_Alpha, Scalaire, Resultat);
-	
+	std::cout << "La Multiplication par un Scalaire a pour resultat (" << Resultat.m_fltX << "," << Resultat.m_fltY << ")" << std::endl;
 	
 	Vect_Alpha.ProdScalVect(Vect_Alpha, Vect_Bravo, resultat);
-	
+	std::cout << "Le Prodiut Scalaire des 2 vecteur a pour resultat (" << resultat << ")" << std::endl;
 
-	Vect_Alpha.Norme(Xa, Ya, Xb, Yb, resultat);
-	
+	Vect_Alpha.Norme(Vect_Alpha, Vect_Bravo, resultat);
+	std::cout << "La Norme de AB a pour resultat (" << resultat << ")" << std::endl;
 
 	Vect_Alpha.ProdVec(Vect_Alpha, Vect_Bravo, Resultat);
+	std::cout << "Le produit Vectoriel des 2 vecteurs a pour resultat (" << Resultat.m_fltX << "," << Resultat.m_fltY << ")" << std::endl;
 	
 
 	system("pause");
